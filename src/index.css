@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* @import './assets/fonts/fonts.css'; */
+@import "tailwindcss";
+
+@theme{
+  --color-p1:#F3793B;
+  --color-p2:#37505b;
+  --color-p3:#f8f9fa;
+  --color-p4:#323232;
+  --color-p5:#282828;
+  --color-p6:#fefefe;
+  --color-p7:#F58F5C;
+  --color-p8:##F47F5C;
+  --font-lato:'lato','sans-serif'
+}
+
+@layer base{
+  html {
+    @apply bg-p3;
+  }
+
+  body {
+    @apply font-lato text-[16px] tracking-[-0.03em] text-p5;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  img {
+    @apply block max-w-full;
+  }
+
+  button {
+    @apply bg-none tracking-[-0.03em];
+  }
+  img{
+    @apply block max-w-full;
+  }
+
+  input {
+    @apply tracking-[-0.03em];
+  }
+}
+
+@layer components{
+  body{
+    font-size: var(--text-lg);
+    letter-spacing: var(--tracking-normal);
+  }
+  h1{
+    color: var(--color-yellow-300);
+  }
+  p{
+    color: var(--color-yellow-500);
+  }
+}
+
+@layer utilities{
+   .container {
+    @apply mx-auto max-w-[1412px] px-16 max-xl:px-10 max-lg:px-6 max-sm:px-4;
+  }
+  .dot{
+    @apply h-1.5 w-1.5 rounded-full bg-p4;
+  }
+  .base-bold{
+    @apply text-[16px] font-bold leading-[24px];
+  }
+  .base-extrabold{
+    @apply text-[20px] font-extrabold leading-[28px];
+  }
+
+.nav-active {
+    @apply text-p5;
+  }
+
+  .nav-li {
+    @apply relative flex flex-1 items-center justify-between max-lg:flex-col max-lg:items-start;
+  }
+
+  .nav-logo {
+    @apply relative flex flex-1 items-center justify-center;
+  }
+
+  .nav-text{
+    @apply text-[20px] font-bold leading-[28px];
+  }
+
+  .h1 {
+    @apply text-[70px] font-black leading-[84px] tracking-[-0.03em];
+  }
+
+  .h2 {
+    @apply text-[50px] font-black leading-[64px];
+  }
+
+  .h3 {
+    @apply text-[38px] font-extrabold leading-[56px] tracking-[-0.02em];
+  }
+
+  .h4 {
+    @apply text-[28px] font-semibold leading-[52px];
+  }
+
+  .h5 {
+    @apply text-[24px] font-semibold leading-[40px];
+  }
+
+  .h6 {
+    @apply text-[20px] font-medium leading-[36px];
+  }
+
+  .hero-title{
+    @apply  font-extrabold leading-[56px] tracking-[-0.001em];
+  }
+
+  .text-wrapper{
+    @apply max-w-512 lg:max-w-164 absolute top-16 sm:top-24 md:top-22;
+  }
+
+  .box{
+    @apply border-2 border-p6 shadow-p5 rounded-2xl ;
+  }
+  .hero-bg{
+    height: 120vh;
+    padding: 100px 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/sliderBG.png');
+  }
+  .image-rotate{
+    position: absolute;
+    top: 300px;
+    right: -410px;
+    z-index: 0;
+    animation: img-animation 4s linear infinite;
+  }
+
+
+  .join-us-bg{
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url('/images/home-background.jpg');
+
+  }
+
+  @keyframes img-animation{
+    0%{
+      transform: translate(-50%,-50%) rotate(360deg) translateX(625px);
+    }
+    25%{
+      transform: translate(-50%,-50%) rotate(180deg) translateX(300px);
+    }
+    50%{
+      transform: translate(-50%,-50%) rotate(180deg) translateX(300px);
+    }
+    100%{
+      transform: translate(-50%,-50%) rotate(0deg) translateX(780px);
+    }
+  }
+
+
+  .bg-footer{
+    background-image: url('/images/footer-bg.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+}
+
+
+
+/* @layer base{ */
+    
+
+  /* body { */
+    /* font-['lato'] text-[16px] tracking-[-0.03em] text-['p5']; */
+    /* font-family: 'lato';
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    color:#282828 ;
+  }
+  h1{
+    @apply text-4xl;
+  } */
+/* } */
+
+/* @layer utilities{
+    .nav-active{
+        @apply text-p1 text-4xl; */
+        /* color: #37505B; */
+    /* }
+    .dot{
+        width: calc(var(--spacing) * 1.5);
+        height: calc(var(--spacing) * 1.5);
+        border-radius: calc(infinity * 1px);
+        background-color: #080D27;
+    }
+} */
