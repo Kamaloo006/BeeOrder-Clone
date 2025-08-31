@@ -6,6 +6,7 @@ import Layout from "./Layout";
 import Bug from "./pages/Bug";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
+import NotFound from "./pages/NotFound";
 
 export default function App() {
   useEffect(() => {
@@ -34,6 +35,7 @@ export default function App() {
       <Route path="/vulnerability-report" element={<Bug />} />
       <Route path="/terms-and-service" element={<Terms />} />
       <Route path="/privacy-policy" element={<Privacy />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
